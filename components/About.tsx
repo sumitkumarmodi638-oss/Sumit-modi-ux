@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Quote, Award, Briefcase, Clock, ArrowUpRight } from 'lucide-react';
 import { Reveal } from './ui/Reveal';
@@ -21,11 +22,10 @@ export const About: React.FC = () => {
         {/* Bento Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
           
-          {/* 1. HEADLINE CARD (Spans 8 cols) */}
+          {/* 1. HEADLINE CARD */}
           <div className="col-span-12 md:col-span-8">
             <Reveal width="100%">
               <div className="h-full bg-[#0A0A0A] border border-white/5 rounded-[2rem] p-10 md:p-14 relative overflow-hidden group hover:border-indigo-500/30 transition-all duration-500">
-                {/* Background Gradient Hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                 
                 <h2 className="relative z-10 text-5xl md:text-7xl font-display font-bold text-white leading-[0.9] tracking-tight">
@@ -42,19 +42,14 @@ export const About: React.FC = () => {
             </Reveal>
           </div>
 
-          {/* 2. PROFILE IMAGE CARD (Spans 4 cols, Tall) */}
+          {/* 2. PROFILE IMAGE CARD */}
           <div className="col-span-12 md:col-span-4 row-span-1 md:row-span-2">
             <Reveal width="100%" delay={0.2}>
               <div className="h-[500px] md:h-full min-h-[500px] bg-gray-900 rounded-[2rem] overflow-hidden relative group border border-white/5">
-                {/* 
-                   IMPORTANT: 
-                   I have updated the src to 'sumit-profile.jpg'.
-                   Please rename your uploaded image to 'sumit-profile.jpg' and ensure it is in the public/assets folder.
-                */}
                 <img 
-                  src="/sumit-profile.jpg" 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800" 
                   alt={PERSONAL_INFO.name} 
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
+                  className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000 ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80"></div>
                 
@@ -66,7 +61,7 @@ export const About: React.FC = () => {
             </Reveal>
           </div>
 
-          {/* 3. MANIFESTO / BIO CARD (Spans 8 cols) */}
+          {/* 3. MANIFESTO / BIO CARD */}
           <div className="col-span-12 md:col-span-8">
             <Reveal width="100%" delay={0.3}>
               <div className="h-full bg-[#080808] border border-white/5 rounded-[2rem] p-10 relative flex flex-col justify-between group hover:bg-[#0c0c0c] transition-colors duration-500">
@@ -88,9 +83,8 @@ export const About: React.FC = () => {
             </Reveal>
           </div>
 
-          {/* 4. STATS ROW (3 Cards) */}
+          {/* 4. STATS ROW */}
           <div className="col-span-12 md:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-            
             <Reveal width="100%" delay={0.4}>
               <div className="bg-[#0A0A0A] border border-white/5 rounded-[2rem] p-8 hover:border-indigo-500/20 transition-colors group h-full">
                 <div className="flex items-start justify-between mb-4">
@@ -123,9 +117,7 @@ export const About: React.FC = () => {
                 <span className="text-sm text-gray-400">Industry Awards</span>
               </div>
             </Reveal>
-
           </div>
-
         </div>
       </div>
     </section>
